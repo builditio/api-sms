@@ -1,0 +1,3 @@
+- name: base
+  service: web
+  command: bundle exec rails routes
