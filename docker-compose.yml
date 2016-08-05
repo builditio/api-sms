@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+  web:
+    build: .
+    image: pinnacol:api-sms
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
