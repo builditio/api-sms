@@ -1,0 +1,17 @@
+development:
+  twilio:
+    account_sid: ACe63aeea416c520d188ed1631f264a162
+    auth_token: '2e6287fd4f0ebc43b98b1371caa7b88b'
+    default_from: +17204109888
+
+test:
+  twilio:
+    account_sid: ACe63aeea416c520d188ed1631f264a162
+    auth_token: 2e6287fd4f0ebc43b98b1371caa7b88b
+    default_from: +17204109888
+
+production:
+  twilio:
+    account_sid: <%= ENV['TWILIO_ACCOUNT_SID'] %>
+    auth_token: <%= ENV['TWILIO_AUTH_TOKEN'] %>
+    default_from: <%= ENV['TWILIO_DEFAULT_FROM'] %>
